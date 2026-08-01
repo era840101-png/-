@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Elite - Премиум Мәзір</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Шапшаң (Header) -->
+    <header>
+        <div class="container header-container">
+            <!-- Логотип пен атау -->
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>MAISON ELITE</h1>
+                    <span>Restaurant & Lounge</span>
+                </div>
+            </div>
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fa-solid fa-bag-shopping"></i> Себет <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Негізгі бөлім -->
+    <main class="container">
+        <!-- Banner / Welcome section -->
+        <div class="hero-banner">
+            <h2>Таңдаулы дәмдер әлемі</h2>
+            <p>Ерекше атмосфера мен сүйікті тағамдарыңыз бір сілтеме қашықтықта</p>
+        </div>
+
+        <!-- Санаттар (Категориялар) -->
+        <section class="categories">
+            <button class="cat-btn active" onclick="filterMenu('all')">Барлығы</button>
+            <button class="cat-btn" onclick="filterMenu('hot')">Ыстық тағамдар</button>
+            <button class="cat-btn" onclick="filterMenu('fastfood')">Фаст-фуд</button>
+            <button class="cat-btn" onclick="filterMenu('drinks')">Сусындар</button>
+            <button class="cat-btn" onclick="filterMenu('dessert')">Десерттер</button>
+        </section>
+
+        <!-- Мәзір өнімдері -->
+        <section class="menu-grid" id="menu-grid">
+            <!-- JavaScript арқылы толтырылады -->
+        </section>
+    </main>
+
+    <!-- Себет панелі (Slide-out Cart) -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Сіздің таңдауыңыз</h2>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-text">Себетіңіз әзірге бос</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Жалпы сомасы:</span>
+                <span id="totalAmount">0 ₸</span>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp арқылы тапсырыс беру
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
